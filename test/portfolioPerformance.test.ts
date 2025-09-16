@@ -40,6 +40,6 @@ import { calculatePortfolioPerformance, PortfolopPerformance } from  "../src/por
             //ASSERT//
             expect(result.profitOrLoss).toBe(-2000);
             expect(result.percentageChange).toBe(-20);
-            expect(result.performanceSUmmary).toContain("loss slightly");
+            expect(result.performanceSUmmary).toContain("Loss slightly");
         });
     })
