@@ -6,13 +6,13 @@ import { calculatePortfolioPerformance, PortfolopPerformance } from  "../src/por
             const currentValue = 12000;
 
             //ACT//
-           const result = calculatePortfolioPerformance();
+            const result = calculatePortfolioPerformance();
 
             //ASSERT//
             expect(result).not.toBeNull();
             expect(result.profitOrLoss).toBe(2000);
-            expect(result.performanceSUmmary).toBe(20);
-            expect(result.performanceSUmmary).toContain("Gained Significantly");
+            expect(result.performanceChange).toBe(20);
+            expect(result.performanceSummary).toContain("Gained Significantly");
         })
 
         it("should correctly identify no change", () => {
@@ -26,7 +26,7 @@ import { calculatePortfolioPerformance, PortfolopPerformance } from  "../src/por
             //ASSERT//
             expect(result.profitOrLoss).toBe(0);
             expect(result.percentageChange).toBe(0);
-            expect(result.performanceSUmmary).toContain("no change");
+            expect(result.performanceSummary).toContain("no change");
         })
 
         it("should correctly identify the loss", () => {
@@ -40,6 +40,8 @@ import { calculatePortfolioPerformance, PortfolopPerformance } from  "../src/por
             //ASSERT//
             expect(result.profitOrLoss).toBe(-2000);
             expect(result.percentageChange).toBe(-20);
-            expect(result.performanceSUmmary).toContain("Loss slightly");
+            expect(result.performanceSummary).toContain("Loss slightly");
         });
     })
+
+    

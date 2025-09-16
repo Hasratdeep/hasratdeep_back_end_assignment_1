@@ -1,20 +1,20 @@
-    export interface PortfolopPerformance {
-        initialInvestment: number;
-        currentValue: number;
-        profitOrLoss: number;
-        percentageChange: number;
-        performanceSUmmary: String;
+export interface PortfolopPerformance {
+    initialInvestment: number;
+    currentValue: number;
+    profitOrLoss: number;
+    percentageChange: number;
+    performanceSummary: string;
     }
 
-    // The function to calculatePortfoliooPerformance //
-        export function calculatePortfolioPerformance(): any {
-        let initialInvestment =  10000;
-        let currentValue = 12000;
+// The function to calculatePortfoliooPerformance //
+export function calculatePortfolioPerformance(): any {
+    let initialInvestment =  10000;
+    let currentValue = 12000;
 
-        const profitOrLoss = currentValue - initialInvestment;
-        const percentageChange = (profitOrLoss / initialInvestment) * 100;
+    const profitOrLoss = currentValue - initialInvestment;
+    const percentageChange = (profitOrLoss / initialInvestment) * 100;
 
-    // performance summary criteria//
+// performance summary criteria//
     let performanceSummary: string;
         switch(true) {
             case percentageChange > 20:
@@ -22,7 +22,7 @@
             case percentageChange > 10:
                 return performanceSummary = `The portfolio has gained slightly with a profit of $${profitOrLoss}.`;
             case percentageChange > 0:
-                return performanceSummary = `The portfolio has gained no change with  $${profitOrLoss}.`;
+                return performanceSummary = `The portfolio has gained no change with ${profitOrLoss}.`;
             case percentageChange > -0.1:
                 return performanceSummary = `The portfolio has lost slightly with a loss of $${profitOrLoss}.`;
             case percentageChange > -10:
@@ -30,14 +30,17 @@
             case percentageChange > -20:
                 return performanceSummary = `The portfolio has lost significantly with a loss of $${profitOrLoss}.`;
             default:
-                return`The portfolio has performed poorly.`;
+                performanceSummary = `The portfolio has performed poorly.`;
         };
-        
-            return {
+
+        return {
                 initialInvestment,
                 currentValue,
                 profitOrLoss,
                 percentageChange,
                 performanceSummary,
-            };
-        }
+                };
+            }
+
+
+            
