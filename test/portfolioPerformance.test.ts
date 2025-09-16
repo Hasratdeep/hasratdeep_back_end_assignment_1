@@ -1,4 +1,4 @@
-    import { calculatePortfolioPerformance, PortfolopPerformance } from  "../src/portfolio/portfolioPerformance";
+import { calculatePortfolioPerformance, PortfolopPerformance } from  "../src/portfolio/portfolioPerformance";
     describe("calculatePortfolioPerformance", () => {
         it("should correctly identify the profits", () => {
             //ARRANGE//
