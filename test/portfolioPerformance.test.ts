@@ -43,3 +43,6 @@ import { calculatePortfolioPerformance, PortfolopPerformance } from  "../src/por
             expect(result.performanceSUmmary).toContain("Loss slightly");
         });
     })
+
+
+    
